@@ -32,7 +32,7 @@
     <div style="display: flex; align-items: center; flex-direction: column">
         <h1><%= "Java Homework" %></h1>
         <h2>Posts form:</h2>
-        <form method="POST" >
+        <form method="POST" action="<%=request.getContextPath()%>/post-servlet">
             <input type="text" placeholder="Header" name="header">
             <input type="text" placeholder="Content" name="content">
             <input type="text" placeholder="Author" name="author">

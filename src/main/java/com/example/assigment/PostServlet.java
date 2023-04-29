@@ -15,13 +15,15 @@ import javax.swing.*;
 
 import static java.lang.System.out;
 
-@WebServlet(name = "postServlet", value = "/post")
+@WebServlet(name = "postServlet", value = "/post-servlet")
 public class PostServlet extends HttpServlet {
 
     public Connection connect() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/demo?" + "user=root&password=Password"
+                "jdbc:mysql://localhost:4200/demo",
+                "root",
+                "Password"
         );
         return  connection;
     }
